@@ -1,3 +1,3 @@
 export default function DashboardSettings() {
-  return <div>DashboardSettings</div>;
+  return <div>DashboardSettings child page</div>;
 }
