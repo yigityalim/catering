@@ -1,5 +1,3 @@
-import React from "react";
-
-export default async function DashboardPage() {
-  return <>dashboard page</>;
+export default function DashboardPage() {
+  return <div>Dashboard</div>;
 }
