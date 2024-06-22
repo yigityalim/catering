@@ -18,6 +18,6 @@ export async function generateMetadata({ params: { child } }: Readonly<Params>) 
   }
 
   return {
-    title: `${child.at(0).toUpperCase()}${child.slice(1)} | Dashboard settings`,
+    title: `Dashboard settings - ${child}`,
   };
 }
