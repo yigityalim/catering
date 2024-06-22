@@ -62,6 +62,36 @@ export const dashboardMenu = {
         },
       ],
     },
+    {
+      id: uuidv4(),
+      name: 'billing',
+      title: 'Faturalandırma',
+      href: '/dashboard/billing',
+      icon: 'credit-card',
+      children: [
+        {
+          id: uuidv4(),
+          name: 'invoices',
+          title: 'Faturalar',
+          href: '/dashboard/billing/invoices',
+          icon: 'receipt',
+        },
+        {
+          id: uuidv4(),
+          name: 'payment-methods',
+          title: 'Ödeme Yöntemleri',
+          href: '/dashboard/billing/payment-methods',
+          icon: 'credit-card',
+        },
+        {
+          id: uuidv4(),
+          name: 'subscription',
+          title: 'Abonelik',
+          href: '/dashboard/billing/subscription',
+          icon: 'coins',
+        },
+      ],
+    },
   ],
 } satisfies Menu;
 

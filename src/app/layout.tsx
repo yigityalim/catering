@@ -7,7 +7,7 @@ import type { PropsWithChildren } from '@/types';
 
 export const metadata = generateStaticMetadata({
   title: {
-    default: 'Root layout',
+    default: 'Catering',
     template: '%s | Catering APP',
   },
   description: 'Catering APP is a web application for managing catering orders.',
@@ -21,7 +21,7 @@ export default async function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen w-dvw overflow-x-hidden bg-background antialiased',
+          'min-h-dvh w-dvw overflow-x-hidden bg-background antialiased',
           GeistSans.className,
           GeistMono.className,
         )}
