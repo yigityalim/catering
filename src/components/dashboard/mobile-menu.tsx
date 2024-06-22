@@ -21,9 +21,7 @@ export function DashboardMobileMenu() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, type: 'tween', ease: 'easeInOut' }}
-          className={cn(
-            'fixed inset-x-0 bottom-0 top-16 z-50 bg-background/50 saturate-200 backdrop-blur-xl sm:hidden',
-          )}
+          className={cn('fixed inset-x-0 bottom-0 top-16 z-50 sm:hidden')}
         >
           <div className="flex h-full w-full flex-col items-start justify-start gap-8 p-6">
             <Link
