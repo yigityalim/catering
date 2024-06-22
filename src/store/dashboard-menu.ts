@@ -8,9 +8,16 @@ interface SidebarState {
   setOpenMenus: (titles: string[]) => void;
 }
 
-export const useDashboard = create<SidebarState>((set) => ({
+export const useDashboard = create<SidebarState>((set, get) => ({
   mobileMenu: false,
-  setMobileMenu: (open) => set({ mobileMenu: open }),
+  setMobileMenu: (open) => {
+    set({ mobileMenu: open });
+    if (get().mobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  },
   openMenus: [],
   toggleMenu: (title) =>
     set((state) => ({

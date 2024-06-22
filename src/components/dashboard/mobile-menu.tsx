@@ -12,12 +12,6 @@ export function DashboardMobileMenu() {
   const mobileMenu = useDashboard((state) => state.mobileMenu);
   const setMobileMenu = useDashboard((state) => state.setMobileMenu);
 
-  React.useLayoutEffect((): (() => void) => {
-    const originalStyle: string = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = 'hidden';
-    return () => (document.body.style.overflow = originalStyle);
-  }, []);
-
   const pathname = usePathname();
   return (
     <AnimatePresence mode="wait">
@@ -29,12 +23,12 @@ export function DashboardMobileMenu() {
           transition={{ duration: 0.3, type: 'tween', ease: 'easeInOut' }}
           className={cn('fixed inset-x-0 bottom-0 top-16 z-50 sm:hidden')}
         >
-          <div className="flex h-full w-full flex-col items-start justify-start gap-8 bg-background p-6">
+          <div className="flex h-full w-full flex-col items-start justify-start gap-8 bg-background p-4 pt-8">
             <Link
               onClick={() => setMobileMenu(false)}
               href="/dashboard"
-              className={cn('p-1 text-4xl font-semibold text-foreground', {
-                'italic underline underline-offset-8': pathname === '/dashboard',
+              className={cn('text-4xl font-semibold text-foreground', {
+                'underline underline-offset-8': pathname === '/dashboard',
               })}
             >
               Kontrol Paneli
@@ -102,7 +96,7 @@ function CollapseMenu({ item, pathname }: Readonly<CollapseMenuProps>) {
                 href={child.href}
                 onClick={() => setMobileMenu(false)}
                 className={cn('w-full p-1 text-lg font-semibold text-foreground', {
-                  'italic underline underline-offset-8': pathname === child.href,
+                  'underline underline-offset-8': pathname === child.href,
                 })}
               >
                 {child.title}
