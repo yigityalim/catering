@@ -80,7 +80,7 @@ function CollapseMenu({ item, pathname }: Readonly<CollapseMenuProps>) {
           </button>
         )}
       </div>
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence mode="wait">
         {item.children && isOpen && (
           <motion.div
             key={item.title}

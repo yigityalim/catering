@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export function DashboardLayoutTitle() {
+export function DashboardLayoutTitle({ notFound = false }) {
   const pathname = usePathname();
   const { item, parent } = findMenuItemByHref(dashboardMenu, pathname) || {};
   return (
