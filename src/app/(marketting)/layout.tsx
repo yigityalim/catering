@@ -1,15 +1,13 @@
-import type React from 'react';
+import { Header } from '@/components/marketting/header';
 import { generateStaticMetadata } from '@/lib/metadata';
+import type React from 'react';
 
 export default async function MarkettingLayout({ children }: React.PropsWithChildren) {
   return (
-    <main className="flex h-dvh w-full flex-col items-center justify-start">
-      <header className="flex h-16 w-full items-center justify-between px-4 py-2">
-        <span>menu</span>
-        marketting header
-      </header>
-      {children}
-    </main>
+    <>
+      <Header />
+      <main className="flex h-[5000px] w-full flex-col items-center justify-start">{children}</main>
+    </>
   );
 }
 

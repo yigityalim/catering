@@ -26,37 +26,37 @@ import {
 const data = [
   {
     name: 'Page A',
-    uv: 4000,
+    am: 4000,
     pv: 2400,
   },
   {
     name: 'Page B',
-    uv: 3000,
+    am: 3000,
     pv: 1398,
   },
   {
     name: 'Page C',
-    uv: 2000,
-    pv: 9800,
+    am: 2000,
+    pv: 7000,
   },
   {
     name: 'Page D',
-    uv: 2780,
+    am: 2780,
     pv: 3908,
   },
   {
     name: 'Page E',
-    uv: 1890,
+    am: 1890,
     pv: 4800,
   },
   {
     name: 'Page F',
-    uv: 2390,
+    am: 2390,
     pv: 3800,
   },
   {
     name: 'Page G',
-    uv: 3490,
+    am: 3490,
     pv: 4300,
   },
 ];
@@ -145,7 +145,7 @@ const mock = [
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
+        <Area type="monotone" dataKey="am" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
         <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
       </AreaChart>
     ),
@@ -163,7 +163,7 @@ const mock = [
         <Tooltip />
         <Legend />
         <Bar dataKey="pv" fill="#8884d8" />
-        <Bar dataKey="uv" fill="#82ca9d" />
+        <Bar dataKey="am" fill="#82ca9d" />
       </BarChart>
     ),
   },
